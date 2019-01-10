@@ -79,7 +79,7 @@ func drawString(studentInfo student, c *freetype.Context, bg *image.NRGBA) {
 	destFile := dest + studentInfo.id + ".jpg"
 	//os.Remove(destFile)
 	imgfile, _ := os.Create(destFile)
-	src := "sample.jpg" //原始文件路径 studentInfo.path
+	src := "../sample.jpg" //原始文件路径 studentInfo.path
 
 	mutex.Lock()
 	draw.Draw(bg, bg.Bounds(), image.White, image.ZP, draw.Src)
